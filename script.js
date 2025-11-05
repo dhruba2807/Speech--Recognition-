@@ -5,7 +5,8 @@ const inputLanguage = document.querySelector("#language");
 const clearBtn = document.querySelector(".clear");
 const wordCountText = document.querySelector("#wordCount");
 
-let SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+let SpeechRecognition = window.webkitSpeechRecognition;
 let recognition;
 let recording = false;
 
@@ -112,3 +113,4 @@ clearBtn.addEventListener("click",()=>{
   updateWordCount();
   downloadBtn.disabled = true;
 });
+
